@@ -12,7 +12,7 @@
 #define ERROR		"\033[91;1mERROR\033[0m"
 #define CRITICAL	"\033[97;41;1mCRITICAL\033[0m"
 
-void showLog(std::string __time, std::string __level, std::string __title, std::string __body) {
+static void showLog(std::string __time, std::string __level, std::string __title, std::string __body) {
     printf(
         "%s [%s] %s : %s\n",
         __time.c_str(),
@@ -22,7 +22,7 @@ void showLog(std::string __time, std::string __level, std::string __title, std::
     );
 }
 
-std::string getTime() {
+static std::string getTime() {
     auto now = std::chrono::system_clock::now();
     auto now_time_t = std::chrono::system_clock::to_time_t(now);
 

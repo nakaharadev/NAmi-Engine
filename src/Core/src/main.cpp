@@ -9,8 +9,6 @@ class App : public Application {
 	}
 
 	void onUpdate() override {
-		logInfo("App", "onUpdate");
-		stop();
 	}
 
 	void onDestroy() override {

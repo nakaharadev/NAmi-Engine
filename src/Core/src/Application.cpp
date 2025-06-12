@@ -7,7 +7,10 @@ void Application::start() {
 	onCreate();
 
 	while (!_closeMainLoop) {
+		window.update();
 		onUpdate();
+
+		_closeMainLoop = window.shouldClose();
 	}
 
 	onDestroy();
