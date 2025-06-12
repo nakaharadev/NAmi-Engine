@@ -22,4 +22,5 @@ target_include_directories(${PROJECT_NAME} PUBLIC
     ${INCLUDE_DIR}
 )
 
+target_link_libraries(${PROJECT_NAME} Util)
 target_link_libraries(${PROJECT_NAME} Graphic)

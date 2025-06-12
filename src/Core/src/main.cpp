@@ -1,20 +1,20 @@
 #include <Core/Application.hpp>
 
-#include <stdio.h>
+#include <Util/Log.hpp>
 #include <memory>
 
 class App : public Application {
 	void onCreate() override {
-		printf("onCreate\n");
+		logInfo("App", "onCreate");
 	}
 
 	void onUpdate() override {
-		printf("onUpdate\n");
+		logInfo("App", "onUpdate");
 		stop();
 	}
 
 	void onDestroy() override {
-		printf("onDestroy\n");
+		logInfo("App", "onDestroy");
 	}
 };
 
